@@ -20,7 +20,7 @@ const Body: React.FC = () => {
         <div>
           <ScrollShow repeat>
             <p className="text-5xl text-gray3 px-4">
-              You <ImgReveal src="/img/sad.gif"><span className="text-red-500 animate-pulse font-display font-bold">CAN'T</span></ImgReveal> learn to code by watching videos
+              Your <ImgReveal src="/img/sad.gif"><span className="text-red-500 animate-pulse font-display font-bold">PROJECT</span></ImgReveal> is due, you not even started?
             </p>
           </ScrollShow>
           <ScrollShow>
@@ -38,7 +38,7 @@ const Body: React.FC = () => {
           </ScrollShow>
           <ScrollShow>
             <p className="text-3xl text-[#6c7983] max-w-3xl ">
-              Fireship is all about <ImgReveal src="/img/build.gif"><span className="text-green-500 font-display animate-pulse font-bold">PROJECT-BASED</span></ImgReveal> learning. I create short highly-focused videos that make learning to code addicting.
+            We got you covered with <ImgReveal src="/img/build.gif"><span className="text-green-500 font-display animate-pulse font-bold">READY MADE</span></ImgReveal> projects. And hooks it up with matching research papers
             </p>
             <a className="animate-bounce mb-[200px] mt-8 text-2xl no-underline block" href="#fun">
               but like how? 🤔
@@ -54,10 +54,10 @@ const Body: React.FC = () => {
           </ScrollShow>
           <ScrollShow>
             <p className="text-3xl text-[#6c7983]  max-w-3xl  ">
-              I built this one-of-a-kind learning platform to give you <ImgReveal src="/img/dance.gif"><span className="text-pink-500 font-display animate-pulse font-bold">DOPAMINE</span></ImgReveal> hits like XP and meme prizes for every little accomplishment
+            All at <ImgReveal src="/img/dance.gif"><span className="text-pink-500 font-display animate-pulse font-bold">STUDENT-FRIENDLY</span></ImgReveal> prices that'll make your wallet do a happy dance!
             </p>
             <a className="animate-bounce mb-[200px] text-2xl no-underline block mt-8" href="/price">
-              every course starts free, try it out 🚀
+              make your wallet do a happy dance! 🕺🏼
           </a>
           </ScrollShow>
         </div>
@@ -70,7 +70,7 @@ const Body: React.FC = () => {
           </ScrollShow>
           <ScrollShow>
             <p className="text-3xl text-[#6c7983] max-w-3xl">
-              There's tons of free content here, so <ImgReveal src="/img/look.gif"><span className="text-yellow-500 font-display animate-pulse font-bold">PLAY</span></ImgReveal> around before you upgrade
+            Got a killer idea but can't code? No sweat. Try <ImgReveal src="/img/speed.gif"><span className="text-yellow-500 font-display animate-pulse font-bold">PROJECT ON DEMAND!</span></ImgReveal> We'll turbocharge your concept into reality.
             </p>
             <a className="animate-bounce mb-[200px] text-2xl no-underline block mt-8" href="/register">
 						you're signed in, sweet 🤟
