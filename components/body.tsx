@@ -41,7 +41,7 @@ const Body: React.FC = () => {
             We got you covered with <ImgReveal src="/img/build.gif"><span className="text-green-500 font-display animate-pulse font-bold">READY MADE</span></ImgReveal> projects. And hooks it up with matching research papers
             </p>
             <a className="animate-bounce mb-[200px] mt-8 text-2xl no-underline block" href="#fun">
-              but like how? 🤔
+              can't afford it? 😬
             </a>
           </ScrollShow>
         </div>
@@ -57,7 +57,7 @@ const Body: React.FC = () => {
             All at <ImgReveal src="/img/dance.gif"><span className="text-pink-500 font-display animate-pulse font-bold">STUDENT-FRIENDLY</span></ImgReveal> prices that'll make your wallet do a happy dance!
             </p>
             <a className="animate-bounce mb-[200px] text-2xl no-underline block mt-8" href="/price">
-              make your wallet do a happy dance! 🕺🏼
+              gimme the loot 😎
           </a>
           </ScrollShow>
         </div>
