@@ -1,0 +1,130 @@
+/* Logo GIF Animation */
+.logo-gif #logoBg {
+    display: none;
+}
+
+.logo-gif:hover #logo {
+    display: none;
+}
+
+.logo-gif:hover #logoBg {
+    display: block;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background-image: linear-gradient(to top, #ff6a00, #ffde59);
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+}
+
+.gradient-text-green {
+    background-image: linear-gradient(to top, #047857, #65a30d);
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+}
+
+.gradient-text-pink {
+    background-image: linear-gradient(to right, #ff6a00, #ff1493);
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+}
+
+/* Gradient Slide */
+.gradient-slide {
+    background-image: linear-gradient(to right, #ff6a00, #ff1493);
+    background-size: 200% 200%;
+    animation: gradiant-move 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: color 0.2s ease-in-out;
+}
+
+.gradient-slide:hover {
+    color: rgba(0, 0, 0, 0);
+}
+
+.text-orange{
+  color: #ff6a00;
+}
+
+.text-pink{
+  color: #ec4899
+}
+.text-yellow{
+  color: #eab308
+}
+
+
+@keyframes gradiant-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.animate-text-slide-8 {
+  animation: text-slide-8 20s cubic-bezier(0.83, 0, 0.17, 1) infinite;
+}
+
+.img-reveal {
+  position: relative;
+  display: inline-block; /* Add this line */
+}
+
+.img-reveal > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  transition: transform 0.3s ease;
+  z-index: 1; /* Add this line */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out infinite, pause 1s infinite;
+}
+
+
+
+
+.shake:hover {
+  animation-play-state: paused;
+  transform: translate(0, 0); /* Reset the x and y position */
+}
+
+@keyframes pause {
+  0%, 100% {
+    animation-timing-function: step-end;
+  }
+  66.67% {
+    animation-timing-function: step-start;
+    animation-delay: 1s;
+  }
+}
