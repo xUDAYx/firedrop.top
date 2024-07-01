@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Bricolage_Grotesque  } from 'next/font/google'
+import { Bricolage_Grotesque } from 'next/font/google'
 import './globals.css'
 import '/app/animations.css'
 import '/app/scroll-animation.css'
@@ -12,15 +12,16 @@ import { auth } from '@/auth'
 import { AlertDemo } from '@/components/alert'
 import { Footer } from '@/components/footer'
 import ScrollUp from '@/components/ui/scroll-up'
-  
+import favicon from 'public/favicon.png' // Import the favicon image
 
-
-
-const inter = Bricolage_Grotesque ({ subsets: ['latin'] })
+const inter = Bricolage_Grotesque({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Firedrop',
-  description: 'Make Your Projects in Days, Not Weeks | FireDrop'
+  description: 'Make Your Projects in Days, Not Weeks | FireDrop',
+  icons: {
+    icon: '/favicon.png', // Set the favicon path
+  },
 }
 
 export default async function RootLayout({
@@ -45,7 +46,6 @@ export default async function RootLayout({
             <ScrollUp />
             {children}
           </ThemeProvider>
-
         </body>
       </html>
     </SessionProvider>
