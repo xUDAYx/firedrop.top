@@ -1,0 +1,2 @@
+# firedrop.top
+ next.js
