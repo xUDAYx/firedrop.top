@@ -7,10 +7,6 @@ import fireGif from '@/public/fire.gif'
 import firelogo from '@/public/favicon.png' 
 export const navPages = [
   {
-    title: 'DASHBOARD',
-    link: '/dashboard'
-  },
-  {
     title: 'PRO',
     link: '/price'
   },
