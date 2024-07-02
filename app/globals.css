@@ -53,7 +53,11 @@
       width: 8px;
       height: 8px;
     }
+    ::selection {
+    background: #d7d7d7; /* or any other desired color */
+    color: #12181b; /* or any other desired color */
 
+    } 
     ::-webkit-scrollbar-track {
       background-color: rgba(32, 39, 55, 1);
     }
