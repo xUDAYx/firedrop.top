@@ -56,7 +56,7 @@ const Body: React.FC = () => {
             <p className="text-3xl text-[#6c7983]  max-w-3xl  ">
             All at <ImgReveal src="/img/dance.gif"><span className="text-pink-500 font-display animate-pulse font-bold">STUDENT-FRIENDLY</span></ImgReveal> prices that'll make your wallet do a happy dance!
             </p>
-            <a className="animate-bounce mb-[200px] text-2xl no-underline block mt-8" href="/price">
+            <a className="animate-bounce mb-[200px] text-2xl no-underline block mt-8" href="/projects">
               gimme the loot 😎
           </a>
           </ScrollShow>
