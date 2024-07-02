@@ -9,11 +9,18 @@ interface AvatarCirclesProps {
 
 export default function AvatarCircles({ className }: AvatarCirclesProps) {
   const [totalUsers, setTotalUsers] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const fetchTotalUsers = async () => {
-      const total = await getTotalRegisteredUsers()
-      setTotalUsers(total)
+      try {
+        const total = await getTotalRegisteredUsers()
+        setTotalUsers(total)
+      } catch (error) {
+        console.error('Error fetching total registered users:', error)
+      } finally {
+        setIsLoading(false)
+      }
     }
     fetchTotalUsers()
   }, [])
@@ -110,7 +117,7 @@ export default function AvatarCircles({ className }: AvatarCirclesProps) {
           </svg>
         </div>
         <div >
-          <span> <span className='font-bold' >{21+totalUsers} </span> happy students</span>
+          <span> <span className='font-bold' >{totalUsers} </span> happy students</span>
         </div>
           
       </div>

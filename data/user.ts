@@ -27,3 +27,4 @@ export const getTotalRegisteredUsers = async () => {
     return 0
   }
 }
+
