@@ -1,29 +1,10 @@
 'use client'
 import { cn } from '@/lib/utils'
-import { getTotalRegisteredUsers } from '@/data/user' // Import the function
-import { useState, useEffect } from 'react'
-
 interface AvatarCirclesProps {
   className?: string
 }
 
 export default function AvatarCircles({ className }: AvatarCirclesProps) {
-  const [totalUsers, setTotalUsers] = useState(0)
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const fetchTotalUsers = async () => {
-      try {
-        const total = await getTotalRegisteredUsers()
-        setTotalUsers(total)
-      } catch (error) {
-        console.error('Error fetching total registered users:', error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    fetchTotalUsers()
-  }, [])
   return (
     <div className={cn('z-10 flex flex-col mt-4 md:flex-row items-center md:items-center gap-3 pt-3', className)}>
       <div className="flex items-center -space-x-4 rtl:space-x-reverse">
@@ -117,7 +98,7 @@ export default function AvatarCircles({ className }: AvatarCirclesProps) {
           </svg>
         </div>
         <div >
-          <span> <span className='font-bold' >{totalUsers} </span> happy students</span>
+          <span> <span className='font-bold' >44 </span> happy students</span>
         </div>
           
       </div>

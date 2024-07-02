@@ -2,9 +2,6 @@ import { Sparkles } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
-import { cn } from '@/lib/utils'
-import { getTotalRegisteredUsers } from '@/data/user' // Import the function
-
 import ImgReveal from '@/components/ui/img-reveal'
 import AvatarCircles from '@/components/ui/user-avatar-card'
 import '/app/animations.css'

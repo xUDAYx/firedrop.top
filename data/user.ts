@@ -18,13 +18,4 @@ export const getUserById = async (id: string) => {
   }
 }
 
-export const getTotalRegisteredUsers = async () => {
-  try {
-    const totalUsers = await db.user.count()
-    return totalUsers
-  } catch (error) {
-    console.error('Error fetching total registered users:', error)
-    return 0
-  }
-}
 
