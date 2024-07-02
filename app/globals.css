@@ -162,3 +162,31 @@ main {
     background-position: 0% 50%;
   }
 }
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  gap: 1.5rem; /* 6 * 0.25rem = 1.5rem */
+}
+
+@media (min-width: 768px) {
+  .grid-list {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-list {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-list {
+    grid-template-columns: repeat(4, max-content);
+  }
+}
+
+.grid-list {
+  list-style-type: none;
+}
