@@ -13,6 +13,7 @@ import { AlertDemo } from '@/components/alert'
 import { Footer } from '@/components/footer'
 import ScrollUp from '@/components/ui/scroll-up'
 import favicon from 'public/favicon.png' // Import the favicon image
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Bricolage_Grotesque({ subsets: ['latin'] })
 
@@ -25,29 +26,35 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({
-  children
-}: Readonly<{
+  children,
+}: {
   children: React.ReactNode
-}>) {
+}) {
   const session = await auth()
   return (
-    <SessionProvider session={session}>
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+      <body className={inter.className}>
+        <SessionProvider session={session}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
+
+
+            <NextTopLoader
+              color='linear-gradient(to right, #f97316, #9333ea, #db2777)'
+              height={4}
+            />
             <ToastProvider />
-            <AlertDemo /> {/*add alert*/}
+            <AlertDemo />
             <Navbar />
             <ScrollUp />
             {children}
           </ThemeProvider>
-        </body>
-      </html>
-    </SessionProvider>
+        </SessionProvider>
+      </body>
+    </html>
   )
 }

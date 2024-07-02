@@ -1,3 +1,4 @@
+// components/ui/loading-bar.tsx
 import React from 'react';
 
 interface LoadingBarProps {

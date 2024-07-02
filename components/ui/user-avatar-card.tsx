@@ -98,7 +98,7 @@ export default function AvatarCircles({ className }: AvatarCirclesProps) {
           </svg>
         </div>
         <div >
-          <span> <span className='font-bold' >44 </span> happy students</span>
+          <span> <span className='font-bold' >21 </span> happy students</span>
         </div>
           
       </div>

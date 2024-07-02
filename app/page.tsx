@@ -4,7 +4,7 @@ import { Language } from '@/components/languages'
 import { PricingCard } from '@/components/pricing-card'
 import { Testimonials } from '@/components/testimonials'
 import { Body } from '@/components/body';
-
+import LoadingBar from '@/components/ui/loading-bar';
 export default function Home() {
   return (
     <>
