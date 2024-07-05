@@ -4,7 +4,7 @@ description: A machine learning project to detect and classify skin cancer from 
 imageUrl: /img/skin-lesion.webp
 price: 99
 tags:
-  - machine-learning
+  - gradio
   - computer-vision
   - medical-imaging
 ---
