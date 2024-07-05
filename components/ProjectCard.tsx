@@ -27,7 +27,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             width={400}
             height={225}
             className="w-full m-0 mb-1 rounded-t-xl"
-            format="webp"
           />
           <section className="p-5">
             <h5 className="text-white font-bold mb-2">{project.title}</h5>
