@@ -75,7 +75,7 @@ const ProMembership: React.FC = () => {
               Research Paper 
             </li>
           </ul>
-          <Button onClick={onClick} disabled={isLoading}>
+          <Button onClick={() => window.location.href = '/paymentgatway'} disabled={isLoading}>
             {isLoading ? (
               <>
                 <Sparkle className="mr-2 animate-spin" size={16} />
