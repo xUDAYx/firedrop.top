@@ -1,5 +1,6 @@
 import ProjectCard from '@/components/ProjectCard';
 import { getAllProjectData } from '@/lib/projects';
+import { Footer } from '@/components/footer';
 
 export default function ProjectsPage() {
   const allProjectData = getAllProjectData();
@@ -17,6 +18,8 @@ export default function ProjectsPage() {
           ))}
         </ul>
       </div>
+      <Footer />
     </div>
+    
   );
 }
