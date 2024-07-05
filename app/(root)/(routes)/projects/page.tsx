@@ -1,9 +1,39 @@
+import React from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import { getAllProjectData } from '@/lib/projects';
 import { Footer } from '@/components/footer';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function ProjectsPage() {
-  const allProjectData = getAllProjectData();
+  const allProjectData: any = getAllProjectData();
 
   return (
     <div>
@@ -13,13 +43,22 @@ export default function ProjectsPage() {
       </div>
       <div className="project-list">
         <ul className="grid-list justify-items-center pl-0">
-          {allProjectData.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {allProjectData.map((project: any) => (
+            <ProjectCard
+              key={project.slug}
+              project={{
+                slug: project.slug,
+                imageUrl: project.imageUrl,
+                title: project.title,
+                description: project.description,
+                price: project.price,
+                tags: project.tags
+              }}
+            />
           ))}
         </ul>
       </div>
       <Footer />
     </div>
-    
   );
 }

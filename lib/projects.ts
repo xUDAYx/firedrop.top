@@ -38,12 +38,8 @@ export function getAllProjectData() {
   const allProjectData = projectNames.map((projectName) => {
     const { frontmatter } = getProjectData(projectName);
     return {
-      title: frontmatter.title || '',
-      description: frontmatter.description || '',
+      ...frontmatter,
       slug: projectName,
-      imageUrl: frontmatter.imageUrl || '',
-      price: frontmatter.price || 0,
-      tags: frontmatter.tags || [],
     };
   });
 

@@ -4,14 +4,15 @@ import Image from 'next/image';
 
 interface ProjectCardProps {
   project: {
-    title: string;
-    description: string;
     slug: string;
     imageUrl: string;
+    title: string;
+    description: string;
     price: number;
     tags: string[];
   };
 }
+
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
