@@ -41,8 +41,6 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-
-
             <NextTopLoader
               color='linear-gradient(to right, #f97316, #9333ea, #db2777)'
               height={6}

@@ -8,13 +8,12 @@ export default function ProjectsPage() {
 
   return (
     <div>
-      <div className='text-center mb-8 mt-20'>
-        <h1 className='text-white text-5xl mb-1 font-bold'>PROJECTS</h1>
-        <p className='my-0 text-gray3'>Get your project done in a day not months</p>
+      <div className=' mb-8 mt-20'>
+        <h1 className='text-center text-white text-5xl mb-1 font-bold'>PROJECTS</h1>
+        <p className='text-center my-0 text-gray3'>Get your project done in a day not months</p>
         <div className="mx-auto w-24 h-1 my-12 bg-gradient-to-r from-[#464f57] to-[#6c7882] rounded-full"></div>
-      </div>
-      <div className="project-list">
-        <ul className="grid-list justify-items-center pl-0">
+        <div>
+        <ul className="flex flex-wrap justify-items-center gap-4 px-14">
           {allProjectData.map((project: any) => (
             <ProjectCard
               key={project.slug}
@@ -29,6 +28,7 @@ export default function ProjectsPage() {
             />
           ))}
         </ul>
+      </div>
       </div>
       <Footer />
     </div>
