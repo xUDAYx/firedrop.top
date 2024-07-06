@@ -27,10 +27,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   };
 
   return (
-    <div className="p-10 sm:p-6 md:p-8 lg:p-10 xl:p-12 bg-orange-400 lg:grid-list ">
-      <li className="list-none p-0">
+    <div className="">
+      <li className="list-none p-0 w-[350px]  m-4">
+
         <article className="overflow-hidden shadow-xl bg-[#2a2e35] hover:scale-105 rounded-xl transition-transform ease-in-out duration-500 relative">
-          <div className="price-tag  bg-green-600 text-white px-4 py-2 rounded-bl-lg absolute top-0 right-0">
+          <div className="price-tag bg-green-600 text-white px-4 py-2 rounded-bl-lg absolute top-0 right-0 shadow-md shadow-[#000000]">
             &#8377; {project.price}
           </div>
           <Link href={`/projects/${project.slug}`} className="no-underline">
