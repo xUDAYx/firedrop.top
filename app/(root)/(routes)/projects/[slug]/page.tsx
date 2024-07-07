@@ -15,6 +15,8 @@ interface ProjectData {
     imageUrl: string
     headline: string
     price: number
+    tags: string[]
+    lastUpdated: Date
   }
   content: string
 }
@@ -42,7 +44,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         description: data.description,
         imageUrl: `/projects/${projectDir}/img/cover.webp`,
         headline: data.headline,
-        price: data.price
+        price: data.price,
+        tags: data.tags || [],
+        lastUpdated: new Date(data.lastUpdated)
       },
       content: content
     }
@@ -63,7 +67,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
 
   return (
     <>
-      <div className="max-w-3xl p-2 mx-auto text-white">
+      <div className="max-w-3xl p-3 mx-auto text-white">
         <h1 className="text-center text-6xl font-extrabold mt-10">
           {projectData.frontmatter.title}
         </h1>
@@ -134,6 +138,27 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         >
           {projectData.content}
         </ReactMarkdown>
+        <div>
+          <h1 className='text-3xl font-bold mb-8 mt-16 uppercase'>
+            ⚡ Is the Project Updated?
+          </h1>
+          <span className='tag tag-sm tag-pro'>
+            Updated {projectData.frontmatter.lastUpdated.toLocaleDateString()}
+          </span>
+          {projectData.frontmatter.tags.map((tag, index) => (
+            <span key={index} className={`tag tag-sm tag-firebase`}>
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div>
+          <h1 className='text-3xl font-bold mb-8 mt-16 uppercase'>
+            How do I Buy?
+          </h1>
+          <p className='my-2 text-[#d1d5db]'>
+            Just pick your favorite pack, scan the QR code to purchase, and join our private chat for the next steps. Let's make it happen!
+          </p>
+        </div>
       </div>
       <div className="max-w-3xl mx-auto px-10 text-center">
         <h2 className="text-5xl font-extrabold text-white pb-2 inline-block mt-24 mb-12">
@@ -161,10 +186,10 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
               href="/pro/"
               className="font-display text-green-500 no-underline text-xl font-bold"
             >
-              RESEARCH PAPER{' '} 
+              RESEARCH PAPER{' '}
             </a>
             <span className=" text-[16px] font-bold text-slate-200">
-              for ₹{projectData.frontmatter.price+500}
+              for ₹{projectData.frontmatter.price + 500}
             </span>
           </p>
           <p className="mb-4 text-sm text-gray-400">

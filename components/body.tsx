@@ -38,7 +38,7 @@ const Body: React.FC = () => {
           </ScrollShow>
           <ScrollShow>
             <p className="text-3xl text-[#6c7983] max-w-3xl ">
-            We got you covered with <ImgReveal src="/img/build.gif"><span className="text-green-500 font-display animate-pulse font-bold">READY MADE</span></ImgReveal> projects. And hooks it up with matching research papers
+            We got you covered with <ImgReveal src="/img/build.gif"><span className="text-green-500 font-display animate-pulse font-bold">READY-MADE</span></ImgReveal> projects. And hooks it up with matching research papers
             </p>
             <a className="animate-bounce mb-[200px] mt-8 text-2xl no-underline block" href="#fun">
               can't afford it? 😬
@@ -70,7 +70,7 @@ const Body: React.FC = () => {
           </ScrollShow>
           <ScrollShow>
             <p className="text-3xl text-[#6c7983] max-w-3xl">
-            Got a killer idea but can't code? No sweat. Try <ImgReveal src="/img/speed.gif"><span className="text-yellow-500 font-display animate-pulse font-bold">PROJECT ON DEMAND!</span></ImgReveal> We'll turbocharge your concept into reality.
+            Got a killer idea but can't code? No sweat. Try <ImgReveal src="/img/speed.gif"><span className="text-yellow-500 font-display animate-pulse font-bold">PROJECT-ON-DEMAND!</span></ImgReveal> We'll turbocharge your concept into reality.
             </p>
             <a className="animate-bounce mb-[200px] text-2xl no-underline block mt-8" href="/register">
 						you're signed in, sweet 🤟
