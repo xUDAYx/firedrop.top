@@ -6,7 +6,7 @@ const projectsDirectory = path.join(process.cwd(), 'projects');
 
 export function getProjectData(projectName: string) {
   const projectDir = path.join(projectsDirectory, projectName);
-  const filePath = path.join(projectDir, '_home.md');
+  const filePath = path.join(projectDir, '_card.md');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
 

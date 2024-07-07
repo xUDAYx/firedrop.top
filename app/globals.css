@@ -194,3 +194,9 @@ main {
 .grid-list {
   list-style-type: none;
 }
+
+.heading{
+  font-stretch: expanded;
+}
+
+

@@ -52,7 +52,7 @@ export const UserButton = () => {
   const session = useCurrentUser()
 
   const onClick = () => {
-    router.push('/register')
+    router.push('/login')
   }
   const Logout = () => {
     signOut()
@@ -64,7 +64,7 @@ export const UserButton = () => {
       {!session ? (
         <div>
           <Link
-            href="/register"
+            href="/login"
             className="flex md:hidden items-center justify-center rounded-lg cursor-pointer hover:bg-purple-700 drop-shadow-[6px_6px_0_black] hover:drop-shadow-[0_0_7px_rgba(168,85,247,0.5)] transition-all duration-300 px-2 py-2"
           >
             <LogOut className="h-5.5 w-5" />

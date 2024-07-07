@@ -1,0 +1,171 @@
+.tag {
+    display: inline-block;
+    margin-right: 0.25rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.625rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    border-radius: 0.375rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #d1d5db;
+}
+
+.tag-lg {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.625rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 0.5rem;
+}
+
+.tag-pro,
+.tag-green {
+    background-color: #22c55e;
+    color: #ffffff;
+}
+
+.tag-javascript,
+.tag-js {
+    background: #f0db4f;
+    color: black;
+}
+
+.tag-typescript {
+    background: #2775c3;
+    color: white;
+}
+
+.tag-angular {
+    background: #dc0530;
+    color: #fff;
+}
+
+.tag-firebase {
+    background: #ffcb2b;
+    color: #12181a;
+}
+
+.tag-vue {
+    background: #41b883;
+    color: #35495e;
+}
+
+.tag-rxjs {
+    background-color: #ec4899;
+    color: #ffffff;
+}
+
+.tag-node {
+    background: #90c53f;
+    color: #46483d;
+}
+
+.tag-cloud-functions {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.tag-flutter {
+    background: #54c5f8;
+    color: #003b6c;
+}
+
+.tag-google-maps {
+    background: #33a668;
+    color: #f8d845;
+}
+
+.tag-android {
+    background: #a4c34a;
+    color: white;
+}
+
+.tag-stripe,
+.tag-fauna {
+    color: white;
+    background: #6675e0;
+}
+
+.tag-python {
+    color: #ffda5d;
+    background: #3879ab;
+}
+
+.tag-svelte {
+    color: #ffffff;
+    background: #ff3e00;
+}
+
+.tag-react {
+    color: #00d8ff;
+    background: #222;
+}
+
+.tag-ios {
+    color: #fff;
+    background: #000;
+}
+
+.tag-ionic {
+    background: white;
+    color: #4a8afc;
+}
+
+.tag-nest {
+    color: #E0234E;
+    background: #000;
+}
+
+.tag-graphql {
+    color: white;
+    background: #e10097;
+}
+
+.tag-electron {
+    color: #313244;
+    background: #adecf3;
+}
+
+.tag-css {
+    color: #313244;
+    background: #f954be;
+}
+
+.tag-github {
+    color: #fff;
+    background: #24292e;
+}
+
+.tag-deno {
+    color: #e1e9d5;
+    background: #222220;
+}
+
+.tag-docker {
+    color: #ffffff;
+    background: #2496ed;
+}
+
+.tag-nextjs {
+    color: #ffffff;
+    background: #000000;
+}
+
+.tag-rpi {
+    color: #000000;
+    background: #BC1142;
+}
+
+.tag-go {
+    color: #ffffff;
+    background: #00ADD8;
+}
+
+.tag-supabase {
+    color: #3dce8c;
+}
