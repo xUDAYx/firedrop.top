@@ -245,3 +245,28 @@ main {
   -webkit-transform: rotate(-1deg);
   transform: rotate(-1deg);
 }
+
+.box {
+    background-color: #2a2e35;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #404040;
+    padding: 1.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.box-green {
+    border-left-color: #10b981;
+}
+
+.box-red {
+    border-left-color: #ef4444;
+}
+
+.box-yellow {
+    border-left-color: #f59e0b;
+}
+
+.box-blue {
+    border-left-color: #3b82f6;
+}

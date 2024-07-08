@@ -1,8 +1,11 @@
 ---
 title: AUDIOBOOK
 description: A tool to create audiobooks from text using text-to-speech.
+
 lastUpdated: 2024-06-26
 price: 499
+
+video_link : https://www.youtube.com/embed/Q6jDdtbkMIU?si=YtgU89RhYiwt5-U5
 
 tags:
   - Gradio 4.2+
@@ -13,7 +16,7 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 
 ---
 
-## 🎁 What will I Get?
+## 🦄 What will I Get?
 
 # Project Pack
 - 🚀 End-to-end Project
@@ -36,7 +39,7 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 
 ## 🤔 Is this Project Right for Me?
 
-This course is for beginners and experienced developers alike. It is fast-paced and similar to [my style on YouTube](https://www.youtube.com/c/Fireship), but far more in-depth and comprehensive. 
+### This course is intermediate level 🟦 and expects some familiarity with JavaScript and web development. The content is fast-paced and similar to my style on YouTube, but far more in-depth and should be followed in a linear format.  
 
 
 

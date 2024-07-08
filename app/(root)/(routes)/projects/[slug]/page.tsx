@@ -11,6 +11,7 @@ import remarkGfm from 'remark-gfm'
 interface ProjectData {
   frontmatter: {
     title: string
+    video_link: string
     description: string
     imageUrl: string
     headline: string
@@ -41,6 +42,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
     projectData = {
       frontmatter: {
         title: data.title,
+        video_link: data.video_link,
         description: data.description,
         imageUrl: `/projects/${slug}/img/cover.webp`,
         headline: data.headline,
@@ -77,11 +79,14 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
 
         <div className="mx-auto w-24 h-1 my-24 bg-gradient-to-r from-[#464f57] to-[#6c7882] rounded-full"></div>
 
-        <img
-          src={projectData.frontmatter.imageUrl}
-          alt={projectData.frontmatter.title}
-        />
-
+        <div className="flex justify-center">
+          <iframe
+            src={projectData.frontmatter.video_link}
+            title="YouTube Video Player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            className="w-full max-w-2xl h-auto aspect-video "
+          ></iframe>
+        </div>
         <div className="mx-auto w-24 h-1 my-24 bg-gradient-to-r from-[#f97316] to-[#ec4899] rounded-full"></div>
 
         <div className="mb-14">
@@ -103,7 +108,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
               <h2 className="text-3xl font-bold mb-8 mt-16 uppercase" {...props} />
             ),
             h3: ({ node, ...props }) => (
-              <h3 className="text-2xl font-bold text-[#d1d5db] mb-8 mt-16" {...props} />
+              <h3 className="box box-blue " {...props} />
             ),
             li: ({ node, ...props }) => (
               <li className="my-2 pl-1 ml-8 text-[#d1d5db] list-disc" {...props} />
@@ -146,7 +151,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         </h2>
         <div className="mx-auto w-24 h-1 mt-0 mb-24 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"></div>
 
-        <div className=" cursor-pointer bg-slate-900 rounded-lg shadow-3xl p-8 max-w-sm mx-auto border-blue-500 border border-solid ">
+        <div className=" cursor-pointer bg-[#12181b] rounded-lg shadow-3xl p-8 max-w-sm mx-auto border-blue-500 border border-solid ">
           <p className="text-[18px] font-bold text-blue-500">
             PROJECT PACK{' '}
             <span className=" text-[16px] font-bold text-slate-200">
@@ -160,7 +165,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
 
         <h3 className="text-gray-300 font-extrabold mt-11 mb-4 text-2xl">OR</h3>
 
-        <div className="cursor-pointer bg-gray-900 rounded-lg shadow-3xl py-9 px-10 max-w-sm mx-auto border-green-500 border border-solid">
+        <div className="cursor-pointer bg-[#12181b] rounded-lg shadow-3xl py-9 px-10 max-w-sm mx-auto border-green-500 border border-solid">
           <p className="mb-0">
             <a
               href="/pro/"
