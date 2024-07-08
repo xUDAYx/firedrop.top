@@ -42,9 +42,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
     projectData = {
       frontmatter: {
         title: data.title,
-        video_link: data.video_link,
+        video_link: data.video_link || '',
         description: data.description,
-        imageUrl: `/projects/${slug}/img/cover.webp`,
+        imageUrl: `public/img/default-cover.webp`,
         headline: data.headline,
         price: data.price,
         tags: data.tags || [],
@@ -79,14 +79,19 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
 
         <div className="mx-auto w-24 h-1 my-24 bg-gradient-to-r from-[#464f57] to-[#6c7882] rounded-full"></div>
 
-        <div className="flex justify-center">
-          <iframe
-            src={projectData.frontmatter.video_link}
-            title="YouTube Video Player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className="w-full max-w-2xl h-auto aspect-video "
-          ></iframe>
-        </div>
+        {projectData.frontmatter.video_link ? (
+          <div className="flex justify-center">
+            <iframe
+              src={projectData.frontmatter.video_link}
+              title="YouTube Video Player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              className="w-full max-w-2xl h-auto aspect-video"
+            ></iframe>
+          </div>
+        ) : (
+          <img src="/img/default-cover.webp" alt={projectData.frontmatter.imageUrl} />
+        )}
+
         <div className="mx-auto w-24 h-1 my-24 bg-gradient-to-r from-[#f97316] to-[#ec4899] rounded-full"></div>
 
         <div className="mb-14">

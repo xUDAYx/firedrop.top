@@ -228,7 +228,7 @@ main {
 }
 
 .selected-text-yellow {
-  background-color: #ffbe1a;
+  background-color: #ffc83d;
   color: rgb(0, 0, 0);
   padding: 2px 4px;
   display: inline-block; /* Add this line */
@@ -237,7 +237,7 @@ main {
   transform: rotate(-1deg);
 }
 .selected-text-white {
-  background-color: #d7d7d7;
+  background-color: #31d2f7;
   color: rgb(0, 0, 0);
   padding: 2px 4px;
   display: inline-block; /* Add this line */
