@@ -15,7 +15,7 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 
 ## 🎁 What will I Get?
 
-**Base Pack**
+# Project Pack
 - 🚀 End-to-end Project
 - 🌐 Web-based user interface
 - 🎤 Access to 5 Premium Voice Models
@@ -24,8 +24,8 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 - 💬 Join Private Chat with Developer
 - 🔄 1 Review for any changes in project
 
-**Reseach Paper Pack**
-- ✅ All from Base Pack
+##### Reseach Paper Pack
+- ✅ All from Project Pack
 - 📄 Ready-to-Publish Research Paper
 - 📝 Plagiarism Report by Turnitin
 - 🤖 AI Analysis Report by Turnitin

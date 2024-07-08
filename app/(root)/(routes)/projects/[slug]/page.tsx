@@ -6,7 +6,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
 import remarkHtml from 'remark-html'
-import { Heading3 } from 'lucide-react'
+import remarkGfm from 'remark-gfm'
 
 interface ProjectData {
   frontmatter: {
@@ -16,7 +16,7 @@ interface ProjectData {
     headline: string
     price: number
     tags: string[]
-    lastUpdated: Date
+    lastUpdated: string
   }
   content: string
 }
@@ -42,13 +42,13 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
       frontmatter: {
         title: data.title,
         description: data.description,
-        imageUrl: `/projects/${projectDir}/img/cover.webp`,
+        imageUrl: `/projects/${slug}/img/cover.webp`,
         headline: data.headline,
         price: data.price,
         tags: data.tags || [],
-        lastUpdated: new Date(data.lastUpdated)
+        lastUpdated: data.lastUpdated
       },
-      content: content
+      content
     }
   } catch (error: any) {
     if (error.code === 'ENOENT') {
@@ -85,65 +85,43 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         <div className="mx-auto w-24 h-1 my-24 bg-gradient-to-r from-[#f97316] to-[#ec4899] rounded-full"></div>
 
         <div className="mb-14">
-          <ReactMarkdown remarkPlugins={[remarkHtml]}>
+          <ReactMarkdown remarkPlugins={[remarkHtml, remarkGfm]}>
             {projectData.frontmatter.headline}
           </ReactMarkdown>
         </div>
 
         <ReactMarkdown
-          remarkPlugins={[remarkHtml]}
+          remarkPlugins={[remarkHtml, remarkGfm]}
           components={{
-            h1: (props) => (
-              <h1
-                className="text-4xl font-bold mb-8 mt-16 uppercase"
-                {...props}
-              />
+            h1: ({ node, ...props }) => (
+              <h1 className="text-[#d1d5db] text-lg font-bold mb-4 mt-8 selected-text-white" {...props} />
             ),
-            h2: (props) => (
-              <h2
-                className="text-3xl font-bold mb-8 mt-16 uppercase"
-                {...props}
-              />
+            h5: ({ node, ...props }) => (
+              <h5 className="text-[#d1d5db] text-lg font-bold mb-4 mt-8 selected-text-yellow" {...props} />
             ),
-            h3: (props) => (
-              <h3
-                className="text-2xl font-bold text-[#d1d5db] mb-8 mt-16"
-                {...props}
-              />
+            h2: ({ node, ...props }) => (
+              <h2 className="text-3xl font-bold mb-8 mt-16 uppercase" {...props} />
             ),
-            li: (props) => (
-              <li
-                className="my-2 pl-1 ml-8 text-[#d1d5db] list-disc"
-                {...props}
-              />
+            h3: ({ node, ...props }) => (
+              <h3 className="text-2xl font-bold text-[#d1d5db] mb-8 mt-16" {...props} />
             ),
-            p: (props) => (
-              <p className="my-2 text-[#d1d5db] list-disc" {...props} />
+            li: ({ node, ...props }) => (
+              <li className="my-2 pl-1 ml-8 text-[#d1d5db] list-disc" {...props} />
             ),
-            // Add a custom component for the update tag
-            span: (props) => {
-              const { node } = props
-              if (
-                node &&
-                node.properties &&
-                node.properties.className &&
-                typeof node.properties.className === 'string' &&
-                node.properties.className.includes('tag-pro')
-              ) {
-                return <span className="tag tag-sm tag-pro" {...props} />
-              }
-              return <span {...props} />
-            }
+            p: ({ node, ...props }) => (
+              <p className="my-2 text-[#d1d5db]" {...props} />
+            ),
           }}
         >
           {projectData.content}
         </ReactMarkdown>
+
         <div>
           <h1 className='text-3xl font-bold mb-8 mt-16 uppercase'>
             ⚡ Is the Project Updated?
           </h1>
           <span className='tag tag-sm tag-pro'>
-            Updated {projectData.frontmatter.lastUpdated.toLocaleDateString()}
+            Updated {new Date(projectData.frontmatter.lastUpdated).toLocaleDateString()}
           </span>
           {projectData.frontmatter.tags.map((tag, index) => (
             <span key={index} className={`tag tag-sm tag-firebase`}>
@@ -151,6 +129,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
             </span>
           ))}
         </div>
+
         <div>
           <h1 className='text-3xl font-bold mb-8 mt-16 uppercase'>
             How do I Buy?
@@ -160,6 +139,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
           </p>
         </div>
       </div>
+
       <div className="max-w-3xl mx-auto px-10 text-center">
         <h2 className="text-5xl font-extrabold text-white pb-2 inline-block mt-24 mb-12">
           HOW TO BUY
@@ -168,13 +148,13 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
 
         <div className=" cursor-pointer bg-slate-900 rounded-lg shadow-3xl p-8 max-w-sm mx-auto border-blue-500 border border-solid ">
           <p className="text-[18px] font-bold text-blue-500">
-            BUY THIS PROJECT{' '}
+            PROJECT PACK{' '}
             <span className=" text-[16px] font-bold text-slate-200">
               for ₹{projectData.frontmatter.price}
             </span>
           </p>
           <p className="mt-0 mb-4 text-sm text-gray-400">
-            Full Project + Installation Video + PPT + Docs
+            Get all Project content && bonus perks
           </p>
         </div>
 
@@ -193,7 +173,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
             </span>
           </p>
           <p className="mb-4 text-sm text-gray-400">
-            Everything + Research Paper + Plagiarism Report
+              Lifetime access for a blazingly low price
           </p>
         </div>
       </div>

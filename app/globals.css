@@ -200,3 +200,48 @@ main {
 }
 
 
+
+
+.background-span {
+  position: relative;
+  white-space: nowrap;
+  leading-relaxed: leading-relaxed;
+}
+
+.background-span::before {
+  content: '';
+  position: absolute;
+  background-color: #d1d5db;
+  left: -0.5rem;
+  top: -0.25rem;
+  bottom: -0.25rem;
+  right: -0.5rem;
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+
+  @media (min-width: 768px) {
+    left: -0.75rem;
+    top: 0;
+    bottom: 0;
+    right: -0.75rem;
+  }
+}
+
+.selected-text-yellow {
+  background-color: #ffbe1a;
+  color: rgb(0, 0, 0);
+  padding: 2px 4px;
+  display: inline-block; /* Add this line */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+.selected-text-white {
+  background-color: #d7d7d7;
+  color: rgb(0, 0, 0);
+  padding: 2px 4px;
+  display: inline-block; /* Add this line */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
