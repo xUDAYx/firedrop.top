@@ -1,11 +1,11 @@
 ---
 title: Audiobook Maker
-description: A tool to create audiobooks from text using text-to-speech.
+description: Tool to create personalized audiobooks in your own voice!
 imageUrl: /img/audiobook.webp
 price: 499
 tags:
   - text-to-speech
-  - rvc
+  - deep-learning
   - research-paper
   - gradio
   - web-ui

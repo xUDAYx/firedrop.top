@@ -5,7 +5,7 @@ description: A tool to create audiobooks from text using text-to-speech.
 lastUpdated: 2024-06-26
 price: 499
 
-video_link : https://www.youtube.com/embed/Q6jDdtbkMIU?si=YtgU89RhYiwt5-U5
+
 
 tags:
   - Gradio 4.2+
