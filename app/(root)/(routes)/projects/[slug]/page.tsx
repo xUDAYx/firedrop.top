@@ -157,12 +157,12 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         <div className="mx-auto w-24 h-1 mt-0 mb-24 bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"></div>
 
         <div className=" cursor-pointer bg-[#12181b] rounded-lg shadow-3xl p-8 max-w-sm mx-auto border-blue-500 border border-solid ">
-          <p className="text-[18px] font-bold text-blue-500">
+          <a href='/paymentgatway' className="text-[18px] font-bold text-blue-500">
             PROJECT PACK{' '}
             <span className=" text-[16px] font-bold text-slate-200">
               for ₹{projectData.frontmatter.price}
             </span>
-          </p>
+          </a>
           <p className="mt-0 mb-4 text-sm text-gray-400">
             Get all Project content && bonus perks
           </p>
@@ -173,7 +173,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
         <div className="cursor-pointer bg-[#12181b] rounded-lg shadow-3xl py-9 px-10 max-w-sm mx-auto border-green-500 border border-solid">
           <p className="mb-0">
             <a
-              href="/pro/"
+              href="/paymentgatway"
               className="font-display text-green-500 no-underline text-xl font-bold"
             >
               PAPER PACK{' '}

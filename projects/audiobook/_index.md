@@ -39,7 +39,7 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 
 ## 🤔 Is this Project Right for Me?
 
-### This course is intermediate level 🟦 and expects some familiarity with JavaScript and web development. The content is fast-paced and similar to my style on YouTube, but far more in-depth and should be followed in a linear format.  
+### This project is perfect for everyone, from noobs to semi-pros who have Python installed on their laptops and can type—just kidding! This is for those who want to create epic, personalized audiobooks with ease. Dive into the cool world of voice cloning and text-to-speech tech, and wow your friends and professors with your mad skills!  
 
 
 
