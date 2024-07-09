@@ -229,21 +229,19 @@ main {
 
 .selected-text-yellow {
   background-color: #ffc83d;
+  
   color: rgb(0, 0, 0);
   padding: 2px 4px;
   display: inline-block; /* Add this line */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  -webkit-transform: rotate(-1deg);
-  transform: rotate(-1deg);
+
 }
 .selected-text-white {
-  background-color: #31d2f7;
+  background-color: #d1d5db;
   color: rgb(0, 0, 0);
   padding: 2px 4px;
   display: inline-block; /* Add this line */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  -webkit-transform: rotate(-1deg);
-  transform: rotate(-1deg);
 }
 
 .box {

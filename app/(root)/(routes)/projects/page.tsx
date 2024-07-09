@@ -10,8 +10,8 @@ export default function ProjectsPage() {
     <div>
       <div>
         {/* Heading */}
-        <h1 className='text-center text-white text-5xl mb-1 mt-24 font-bold'>PROJECTS</h1>
-        <p className='text-center my-0 text-gray3'>Get your project done in a day not months</p>
+        <h1 className='text-center text-white text-5xl mb-1 mt-24 font-bold'>Projects</h1>
+        <p className='text-center my-0 text-gray3'>Save hours of debuggin code, build fast, get going!</p>
 
         {/* gray bar  */}
         <div className="mx-auto w-24 h-1 my-12 bg-gradient-to-r from-[#464f57] to-[#6c7882] rounded-full"></div>

@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import QRCodeGen from './qr-code-gen';
 
 const openGooglePayApp = () => {
-  const googlePayUri = 'googlepay://'
+  const googlePayUri = 'googlepay://pay?pa=jawheriuday-1@okaxis&pn=Uday%20Jawheri&am=100.00&cu=INR&aid=uGICAgICdzajtEA'
   const isGooglePayInstalled = window.navigator.userAgent.includes('GooglePay')
 
   if (isGooglePayInstalled) {
@@ -89,7 +89,7 @@ const QRGen = () => {
   const isIdValid = id.length === 12
 
   return (
-    <section className="max-w-md mx-auto p-6 bg-[#252529] rounded-lg shadow-2xl">
+    <section className="max-w-md mx-auto p-6 bg-[#252529] rounded-lg shadow-2xl my-24">
 
     {!showQRCode ? (
       
@@ -172,16 +172,27 @@ const QRGen = () => {
               Back
             </button>
           </div> */}
-          <p className="mb-4">
-            Scan the QR Code with any UPI App and pay the amount then download
-            the source code.
+          <p className="mb-4 text-white">
+            <ul className='my-1'>
+              <li className='my-1'>
+                1. Scan the QR code and pay using any UPI app.
+              </li>
+              <li className='my-1'>
+              2. Enter the transaction ID/Number in the field below.
+              </li>
+              <li className='my-1'>
+              3. You will receive a mail for further processing.
+              </li>
+              <li className='my-1'>
+              4. If you don't see the mail, please check your spam folder.
+              </li>
+            </ul>
+          
+          
+          
+          
           </p>
           <div className="my-8">
-            {/* <QRCode
-              value={`upi://pay?pa=jawheriuday-1@okaxis&pn=Uday%20Jawheri&am=499.00&cu=INR&aid=uGICAgICdzajtEA`}
-              size={200}
-              className="mx-auto"
-            /> */}
             <QRCodeGen amount={499.0} />;
           </div>
           <div className="mb-4">
@@ -189,7 +200,7 @@ const QRGen = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="id" className="block font-medium mb-1">
-              UTR/REFERENCE/TRANSACTION ID
+              UPI/REFERENCE/TRANSACTION ID
             </label>
             <input
               type="text"
@@ -202,17 +213,17 @@ const QRGen = () => {
               maxLength={12}
             />
           </div>
-          <div className={`flex ${isMobileResolution ? 'justify-between' : 'justify-center'}`}>
+          <div className={`flex ${isMobileResolution ? 'justify-center' : 'justify-center'}`}>
             {isMobileResolution && formSubmitted && (
               <button
-                className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors duration-300"
+                className="px-4 py-2 hidden bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors duration-300"
                 onClick={openGooglePayApp}
               >
                 Pay with Google Pay
               </button>
             )}
             <button
-              className={`px-5 py-4 rounded-md  transition-colors duration-300 ${
+              className={`px-7 py-3 rounded-md transition-colors duration-300 ${
                 isIdValid
                   ? 'bg-green-500 text-white hover:bg-green-600'
                   : 'bg-gray-500 text-gray-300 cursor-not-allowed hover:bg-gray-500'
@@ -220,7 +231,7 @@ const QRGen = () => {
               onClick={downloadNow}
               disabled={!isIdValid}
             >
-              Download Now
+              Join
             </button>
           </div>
         </div>

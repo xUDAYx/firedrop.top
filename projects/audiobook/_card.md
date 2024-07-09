@@ -5,6 +5,10 @@ imageUrl: /img/audiobook.webp
 price: 499
 tags:
   - text-to-speech
-  - audio
   - rvc
+  - research-paper
+  - gradio
+  - web-ui
+
 ---
+

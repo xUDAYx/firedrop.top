@@ -24,6 +24,7 @@
 }
 
 .tag-pro,
+.tag-web-ui,
 .tag-green {
     background-color: #22c55e;
     color: #ffffff;
@@ -40,12 +41,12 @@
     color: white;
 }
 
-.tag-angular {
+.tag-streamlit {
     background: #dc0530;
     color: #fff;
 }
 
-.tag-firebase {
+.tag-gradio {
     background: #ffcb2b;
     color: #12181a;
 }
@@ -70,7 +71,7 @@
     color: #ffffff;
 }
 
-.tag-flutter {
+.tag-research-paper {
     background: #54c5f8;
     color: #003b6c;
 }

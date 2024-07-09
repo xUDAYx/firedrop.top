@@ -176,7 +176,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
               href="/pro/"
               className="font-display text-green-500 no-underline text-xl font-bold"
             >
-              RESEARCH PAPER{' '}
+              PAPER PACK{' '}
             </a>
             <span className=" text-[16px] font-bold text-slate-200">
               for ₹{projectData.frontmatter.price + 500}
