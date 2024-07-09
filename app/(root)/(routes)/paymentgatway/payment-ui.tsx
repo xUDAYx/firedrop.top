@@ -69,18 +69,32 @@ const QRGen = () => {
     setFormSubmitted(true)
   }
 
-  const downloadNow = () => {
-    console.log('Download initiated with data:', { name, number, email, id })
-    toast.success(
-      'The link will be shared on the provided email shortly. Check your spam!',
-      { duration: 10000 }
-    )
-
-    setTimeout(() => {
-      router.push('/')
-    }, 3000)
+  const downloadNow = async () => {
+    try {
+      const response = await fetch('/api/payment-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, number, email, id }), // Pass email here
+      });
+  
+      if (response.ok) {
+        toast.success(
+          'The link will be shared on the provided email shortly. Check your spam!',
+          { duration: 10000 }
+        )
+        setTimeout(() => {
+          router.push('/')
+        }, 3000)
+      } else {
+        toast.error('Failed to save payment data. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error saving payment data:', error);
+      toast.error('Failed to save payment data. Please try again.');
+    }
   }
-
   const goBack = () => {
     setShowQRCode(false)
     setFormSubmitted(false)
@@ -200,7 +214,7 @@ const QRGen = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="id" className="block font-medium mb-1">
-              UPI/REFERENCE/TRANSACTION ID
+              UTR/REFERENCE/TRANSACTION ID
             </label>
             <input
               type="text"
