@@ -28,7 +28,7 @@ export const Navbar = () => {
             href="/"
           >
             <FiredropLogo />
-            <Image className='md:hidden' src={firelogo} alt="logo" id="logo" width={48} height={48} />
+            
             <img
               className="relative bottom-2 left-[-1px]"
               id="logoBg"
