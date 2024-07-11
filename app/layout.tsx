@@ -46,7 +46,7 @@ export default async function RootLayout({
               height={6}
             />
             <ToastProvider />
-            <AlertDemo />
+            {/* <AlertDemo /> */}
             <Navbar />
             <ScrollUp />
             {children}
