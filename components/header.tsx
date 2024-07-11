@@ -55,11 +55,11 @@ export const Header = () => {
               </li>
             </ul>
           </div> */}
-          <div className="flex justify-center lg:justify-start items-center mt-9">
-            <Link href="#start">
+          <div className="flex justify-center lg:justify-start items-center mt-9 br">
+            <Link href="/projects">
               <Button className="gap-2 btn-green rounded-none px-14 py-6">
                 <Sparkles className="h-5 w-5" />
-                <span>Start Here</span>
+                <span>Get Project</span>
               </Button>
             </Link>
           </div>

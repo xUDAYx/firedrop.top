@@ -139,3 +139,16 @@
   background-color: #007bff; /* Set the color of the loading bar */
   z-index: 9999; /* Ensure the loading bar is on top of other elements */
 }
+
+@keyframes slow-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6%);
+  }
+}
+
+.animate-bounce-medium {
+  animation: slow-bounce 0.5s infinite;
+}

@@ -21,7 +21,7 @@ export const Navbar = () => {
     <nav className="top-0 w-full z-50 transition">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <MobileSidebar />
+          {/* <MobileSidebar /> */}
           {/* Logo */}
           <a
             className="flex justify-center items-center text-center w-12 h-12 logo-gif"
@@ -46,8 +46,8 @@ export const Navbar = () => {
                   key={index}
                   href={page.link}
                   className={`flex items-center gradient-slide:hover hover:scale-105 h-full transition duration-300 px-4 rounded-md ${
-                    page.title === 'PRO'
-                      ? 'font-display text-base font-bold text-green-500 border-green-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.9)] hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.9)] '
+                    page.title === 'PROJECTS'
+                      ? 'font-display text-base font-bold text-green-500 border-green-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.9)] hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.9)] animate-bounce-medium'
                       : ''
                   }`}
                 >

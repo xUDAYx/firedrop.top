@@ -145,7 +145,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
             How do I Buy?
           </h1>
           <p className='my-2 text-[#d1d5db]'>
-            Just pick your favorite pack, scan the QR code to purchase, and join our private chat for the next steps. Let's make it happen!
+            Just pick your favorite pack, scan the QR code <span className='selected-text-yellow'>Pay  ₹ 100</span> for now, and join our private chat for the next steps. Let's make it happen!
           </p>
         </div>
       </div>
