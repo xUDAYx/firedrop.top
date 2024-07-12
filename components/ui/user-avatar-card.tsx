@@ -9,27 +9,27 @@ export default function AvatarCircles({ className }: AvatarCirclesProps) {
     <div className={cn('z-10 flex flex-col mt-4 md:flex-row items-center md:items-center gap-3 pt-3', className)}>
       <div className="flex items-center -space-x-4 rtl:space-x-reverse">
         <img
-          className="h-10 w-10 rounded-full border-4 border-[#181e27]"
+          className="h-11 w-11 rounded-full border-4 border-[#181e27]"
           src="/img/testimonial/lennard.webp"
           alt=""
         />
          <img
-          className="h-10 w-10 rounded-full border-4 border-[#181e27]"
+          className="h-11 w-11 rounded-full border-4 border-[#181e27]"
           src="/img/testimonial/andrew.webp"
           alt=""
         />
          <img
-          className="h-10 w-10 rounded-full border-4 border-[#181e27]"
+          className="h-11 w-11 rounded-full border-4 border-[#181e27]"
           src="/img/testimonial/naveen.webp"
           alt=""
         />
          <img
-          className="h-10 w-10 rounded-full border-4 border-[#181e27]"
+          className="h-11 w-11 rounded-full border-4 border-[#181e27]"
           src="/img/testimonial/artificery.webp"
           alt=""
         />
          <img
-          className="h-10 w-10 rounded-full border-4 border-[#181e27]"
+          className="h-11 w-11 rounded-full border-4 border-[#181e27]"
           src="/img/testimonial/dunsin.webp"
           alt=""
         />
