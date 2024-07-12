@@ -42,7 +42,7 @@
 }
 
 .tag-streamlit {
-    background: #dc0530;
+    background: #bc3d43;
     color: #fff;
 }
 
@@ -162,11 +162,10 @@
     background: #BC1142;
 }
 
-.tag-go {
-    color: #ffffff;
-    background: #00ADD8;
+.tag-ml {
+    color: #00ADD8;
 }
 
-.tag-supabase {
+.tag-ai-ml {
     color: #3dce8c;
 }
