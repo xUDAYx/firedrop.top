@@ -13,9 +13,12 @@ import { useCurrentUser } from '@/hooks/use-current-user'
 import { signOut } from 'next-auth/react'
 import {
   Book,
+  BookMarkedIcon,
   CreditCard,
   LayoutDashboard,
+  LogIn,
   LogOut,
+  LucidePackage,
   Settings
 } from 'lucide-react'
 import Link from 'next/link'
@@ -31,20 +34,15 @@ export const UserButton = () => {
       icon: LayoutDashboard
     },
     {
-      label: 'Docs',
-      href: '/docs',
-      icon: Book
+      label: 'Projects',
+      href: '/projects',
+      icon: LucidePackage
     },
     {
-      label: 'Billing',
-      href: '/payments',
-      icon: CreditCard
+      label: 'Papers',
+      href: '/papers',
+      icon: BookMarkedIcon
     },
-    {
-      label: 'Settings',
-      href: '/settings',
-      icon: Settings
-    }
   ]
   // Random gradient colors for Avatar
 
@@ -67,7 +65,7 @@ export const UserButton = () => {
             href="/login"
             className="flex md:hidden items-center justify-center rounded-lg cursor-pointer hover:bg-purple-700 drop-shadow-[6px_6px_0_black] hover:drop-shadow-[0_0_7px_rgba(168,85,247,0.5)] transition-all duration-300 px-2 py-2"
           >
-            <LogOut className="h-5.5 w-5" />
+            <LogIn className="h-6.5 w-6 " />
           </Link>
 
           <Button

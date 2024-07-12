@@ -28,7 +28,6 @@ export const Navbar = () => {
             href="/"
           >
             <FiredropLogo />
-            
             <img
               className="relative bottom-2 left-[-1px]"
               id="logoBg"
@@ -39,8 +38,8 @@ export const Navbar = () => {
             />
           </a>
           {/* Links, Theme, & User */}
-          <div className="sm:flex h-[40px] items-center text-lg md:text-lg font-medium gap-4 transition-all">
-            <div className="flex items-center h-full text-base font-bold">
+          <div className="sm:flex h-[40px] items-center text-lg md:text-lg font-medium transition-all">
+            <div className="flex items-center h-full text-base gap-4 font-bold">
               {navPages.map((page, index) => (
                 <Link
                   key={index}
@@ -50,11 +49,12 @@ export const Navbar = () => {
                       ? 'font-display text-base font-bold text-green-500 border-green-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.9)] hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.9)] animate-bounce-medium'
                       : ''
                   }`}
+                  
                 >
                   {page.title}
                 </Link>
               ))}
-              <div className="flex h-full m-0 md:ml-4">
+              <div className="flex h-full m-0 md:ml-6">
                 {/* <ModeToggle /> */}
                 <UserButton />
               </div>
