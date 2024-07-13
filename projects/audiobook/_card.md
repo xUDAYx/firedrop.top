@@ -2,10 +2,10 @@
 title: Audiobook Maker
 description: Tool to create personalized audiobooks in your own voice!
 imageUrl: /img/audiobook.webp
-price: 399
+price: 499
 tags:
   - text-to-speech
-  - deep-learning
+  - deep-learning 
   - ml
   - research-paper
   - gradio
