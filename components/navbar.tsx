@@ -27,7 +27,7 @@ export const Navbar = () => {
             className="flex justify-center items-center text-center w-12 h-12 logo-gif"
             href="/"
           >
-            <img src="/favicon.png" alt="logo" />
+            <img className='w-11 h-11 mb-2' src="/favicon.png" alt="logo" />
             {/* <img
               className="relative bottom-2 left-[-1px]"
               id="logoBg"
