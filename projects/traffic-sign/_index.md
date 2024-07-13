@@ -1,17 +1,16 @@
 ---
-title: AUDIOBOOK
-description: A tool to create audiobooks from text using text-to-speech.
+title: Traffic Sign Classification CNN
+description: Build a cutting-edge AI system for real-time traffic sign detection and classification
 
-lastUpdated: 2024-06-26
-price: 499
+lastUpdated: 2024-06-26 (todays date)
+price: 399
 
 
 
 tags:
   - Gradio 4.2+
 
-headline : Tool to create personalized audiobooks in your **own voice!** Add custom audio effects and background music to transform any text into an engaging auditory experience using [**RVC Real-Time Voice Cloning**](https://www.youtube.com/c/Fireship) and [**TTS Text-to-Speech**](https://www.youtube.com/c/Fireship). 
-
+headline : Traffic Sign Detection and Recognition on Static Images and Live Video Streams using Convolutional Neural Networks
 #use [text](link) to make a text rediting to a link 
 
 ---
@@ -21,8 +20,9 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 # Project Pack
 - 🚀 End-to-end Project
 - 🌐 Web-based user interface
-- 🎤 Access to 5 Premium Voice Models
-- 📄 PPT and Documents 
+- 🖼️ Support for static image and live video input
+- 🧠 Fine-tuned CNN model for accurate sign classification - 98%
+- 📘 Detailed documentation and presentation materials
 - 🎥 Step-by-Step Installation Video
 - 💬 Join Private Chat with Developer
 - 🔄 1 Review for any changes in project
@@ -39,7 +39,7 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 
 ## 🤔 Is this Project Right for Me?
 
-### This project is perfect for everyone, from noobs to semi-pros who have Python installed on their laptops and can type—just kidding! This is for those who want to create epic, personalized audiobooks with ease. Dive into the cool world of voice cloning and text-to-speech tech, and wow your friends and professors with your mad skills!  
+### This project is perfect for everyone who wants to dive into the world of computer vision and deep learning! Students aiming for top grades and standout portfolios, Developers breaking into AI and computer vision, Real-world problem-solving in road safety, Practical implementation of deep learning concepts.
 
 
 

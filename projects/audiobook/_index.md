@@ -10,7 +10,7 @@ video_link: https://www.youtube.com/embed/0Zp4EnEsBB0
 tags:
   - Gradio 4.2+
 
-headline : Tool to create personalized audiobooks in your **own voice!** Add custom audio effects and background music to transform any text into an engaging auditory experience using [**RVC Real-Time Voice Cloning**](https://www.youtube.com/c/Fireship) and [**TTS Text-to-Speech**](https://www.youtube.com/c/Fireship). 
+headline : Create stunning audiobooks with your own voice using cutting-edge RVC Real-Time Voice Cloning and TTS Text-to-Speech technology. Add custom effects and background music to bring any text to life!
 
 #use [text](link) to make a text rediting to a link 
 
@@ -22,6 +22,7 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 - 🚀 End-to-end Project
 - 🌐 Web-based user interface
 - 🎤 Access to 5 Premium Voice Models
+- 🎵 Background music integration
 - 📄 PPT and Documents 
 - 🎥 Step-by-Step Installation Video
 - 💬 Join Private Chat with Developer
@@ -39,7 +40,9 @@ headline : Tool to create personalized audiobooks in your **own voice!** Add cus
 
 ## 🤔 Is this Project Right for Me?
 
-### This project is perfect for everyone, from noobs to semi-pros who have Python installed on their laptops and can type—just kidding! This is for those who want to create epic, personalized audiobooks with ease. Dive into the cool world of voice cloning and text-to-speech tech, and wow your friends and professors with your mad skills!  
+### Whether you're a coding newbie or a tech-savvy developer, this project offers an exciting journey into the world of AI-powered audio creation. Impress your peers, boost your portfolio, and unlock new creative possibilities with this cutting-edge tool!
+
+**Get Started Now** and revolutionize your audiobook creation process!
 
 
 

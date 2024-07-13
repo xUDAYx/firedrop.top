@@ -4,8 +4,8 @@ description: Traffic Sign Detection and Recognition on Static Image and Live Vid
 imageUrl: /img/cover.webp
 price: 399
 tags:
-  - real-time 
-  - cnn
+  - python
+  - computer-vision
   - ml
   - research-paper
   - gradio
