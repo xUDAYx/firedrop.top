@@ -27,15 +27,15 @@ export const Navbar = () => {
             className="flex justify-center items-center text-center w-12 h-12 logo-gif"
             href="/"
           >
-            <img className='w-11 h-11 mb-2' src="/favicon.png" alt="logo" />
-            {/* <img
+            <img className='w-11 h-11 mb-2' src="/favicon.png" alt="logo"  id='logo'/>
+            <img
               className="relative bottom-2 left-[-1px]"
               id="logoBg"
               src={fireGif.src}
               alt="fire background"
-              width="48"
-              height="48"
-            /> */}
+              width="44"
+              height="44"
+            />
           </a>
           {/* Links, Theme, & User */}
           <div className="sm:flex h-[40px] items-center text-lg md:text-lg font-medium transition-all">
