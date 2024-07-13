@@ -11,6 +11,12 @@
     display: block;
 }
 
+
+
+.logo-gif:active #logoBg {
+    display: block;
+}
+
 /* Gradient Text */
 .gradient-text {
     background-image: linear-gradient(to top, #ff6a00, #ffde59);
