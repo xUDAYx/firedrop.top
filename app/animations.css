@@ -1,5 +1,5 @@
 /* Logo GIF Animation */
-.logo-gif #logoBg {
+/* .logo-gif #logoBg {
     display: none;
 }
 
@@ -9,7 +9,7 @@
 
 .logo-gif:hover #logoBg {
     display: block;
-}
+} */
 
 /* Gradient Text */
 .gradient-text {

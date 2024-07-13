@@ -28,14 +28,14 @@ export const Navbar = () => {
             href="/"
           >
             <FiredropLogo />
-            <img
+            {/* <img
               className="relative bottom-2 left-[-1px]"
               id="logoBg"
               src={fireGif.src}
               alt="fire background"
               width="48"
               height="48"
-            />
+            /> */}
           </a>
           {/* Links, Theme, & User */}
           <div className="sm:flex h-[40px] items-center text-lg md:text-lg font-medium transition-all">
