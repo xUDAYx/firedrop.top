@@ -237,7 +237,7 @@ main {
 
 }
 .selected-text-white {
-  background-color: #d1d5db;
+  background-color: #ededee;
   color: rgb(0, 0, 0);
   padding: 2px 4px;
   display: inline-block; /* Add this line */

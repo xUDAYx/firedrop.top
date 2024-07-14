@@ -15,7 +15,7 @@ headline : Traffic Sign Detection and Recognition on Static Images and Live Vide
 
 ---
 
-## 🦄 What will I Get?
+## 📚 What will I Get?
 
 # Project Pack
 - 🚀 End-to-end Project
