@@ -19,7 +19,7 @@ const steps: Step[] = [
     description: (
       <div className="space-y-2">
         <div className="text-gray-600 dark:text-gray-400">
-          Have a project requirement or need a project idea? We'll develop any type of project - from your specific requirements or we can create a custom project that matches your course needs.
+          Have a project requirement or need a project idea? We&apos;ll develop any type of project - from your specific requirements or we can create a custom project that matches your course needs.
         </div>
       </div>
     ),

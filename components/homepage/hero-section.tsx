@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import AvatarCircles from "../ui/avatar-circles";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -115,11 +116,11 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="absolute left-28 -top-1.5 -translate-y-1/2 hidden md:block rotate-[12deg] dark:invert"
           >
-            <img 
+            <Image 
               src="/hero/arrow-hero.svg" 
-              alt=""
-              width="119"
-              height="75"
+              alt="Decorative arrow"
+              width={119}
+              height={75}
               className="w-24 h-auto"
             />
           </motion.div>
