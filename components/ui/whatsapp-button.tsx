@@ -91,7 +91,7 @@ export function WhatsAppButton() {
                 text-gray-800 dark:text-gray-200
                 ${isMobile ? 'text-xs' : 'text-sm'}
               `}>
-                👋 Need help with your project? Let's chat!
+                👋 Need help with your project? Let&apos;s chat!
               </p>
               <div className="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2 rotate-45 w-3 h-3 bg-white dark:bg-gray-800"></div>
             </div>

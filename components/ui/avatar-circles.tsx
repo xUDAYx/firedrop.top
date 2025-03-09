@@ -1,6 +1,7 @@
 'use client'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 interface AvatarCirclesProps {
   className?: string
@@ -24,10 +25,12 @@ export default function AvatarCircles({ className }: AvatarCirclesProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
-            <img
-              className="relative h-11 w-11 rounded-full border-2 border-background bg-background"
+            <Image
               src={image.src}
               alt={image.alt}
+              width={32}
+              height={32}
+              className="relative h-8 w-8 rounded-full border-2 border-background bg-background"
             />
           </motion.div>
         ))}
