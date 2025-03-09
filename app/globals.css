@@ -2,36 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
-    /* Adjust these to change the theme color */
-    --primary: 24 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%; 
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
   }
 
   .dark {
-    --background: 0 0% 7%;
+    --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
@@ -43,228 +53,31 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
 
-    background: linear-gradient(176deg, rgba(18, 24, 27, 1) 50%, rgba(32, 39, 55, 1) 100%);
-    min-height: 100vh;
-    background-attachment: fixed;
-
-    /* Scrollbar styles */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::selection {
-    background: #d7d7d7; /* or any other desired color */
-    color: #12181b; /* or any other desired color */
-
-    } 
-    ::-webkit-scrollbar-track {
-      background-color: rgba(32, 39, 55, 1);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: rgba(18, 24, 27, 1);
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(18, 24, 27, 0.8);
-    }
-    body {
-      color: #cbc9c9;
-    }
   }
 }
 
-html {
-  scroll-behavior: smooth;
-  display: block;
-  font-size: 13px;
-}
-
-@media (min-width: 1024px) {
-  html {
-    font-size: 16px;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1 0 0;
-}
 
 
-@media (prefers-reduced-motion: no-preference) {
-  .top {
-    transform: translateY(-20px);
-    filter: hue-rotate(90deg);
-    opacity: 0;
-    transition: all 0.5s;
-    position: relative;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-
-  .right {
-    transform: translateX(-20px);
-    filter: hue-rotate(90deg);
-    opacity: 0;
-    transition: all 0.5s;
-    position: relative;
+  body {
+    @apply bg-background text-foreground;
   }
-
-  .visible {
-    transform: translate(0);
-    filter: hue-rotate(0);
-    opacity: 1;
-  }
-}
-
-.gradient-text {
-  background: linear-gradient(to top, #f97316, #facc15);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-green {
-  background: linear-gradient(to top, #15803d, #4ade80);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-pink {
-  background: linear-gradient(to right, #f97316, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-slide {
-  background: linear-gradient(to right, #f97316, #ec4899);
-  background-size: 200% 200%;
-  animation: gradiant-move 2s ease-in-out infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: color 0.2s ease-in-out;
-}
-
-.gradient-slide:hover {
-  color: rgba(0, 0, 0, 0);
-}
-
-@keyframes gradiant-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.grid-list {
-  display: grid;
-  grid-template-columns: repeat(1, max-content);
-  gap: 1.5rem; /* 6 * 0.25rem = 1.5rem */
-}
-
-@media (min-width: 768px) {
-  .grid-list {
-    grid-template-columns: repeat(2, max-content);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-list {
-    grid-template-columns: repeat(3, max-content);
-  }
-}
-
-@media (min-width: 1280px) {
-  .grid-list {
-    grid-template-columns: repeat(4, max-content);
-  }
-}
-
-.grid-list {
-  list-style-type: none;
-}
-
-.heading{
-  font-stretch: expanded;
-}
-
-
-
-
-.background-span {
-  position: relative;
-  white-space: nowrap;
-  leading-relaxed: leading-relaxed;
-}
-
-.background-span::before {
-  content: '';
-  position: absolute;
-  background-color: #d1d5db;
-  left: -0.5rem;
-  top: -0.25rem;
-  bottom: -0.25rem;
-  right: -0.5rem;
-  -webkit-transform: rotate(-1deg);
-  transform: rotate(-1deg);
-
-  @media (min-width: 768px) {
-    left: -0.75rem;
-    top: 0;
-    bottom: 0;
-    right: -0.75rem;
-  }
-}
-
-.selected-text-yellow {
-  background-color: #ffc83d;
-  
-  color: rgb(0, 0, 0);
-  padding: 2px 4px;
-  display: inline-block; /* Add this line */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-}
-.selected-text-white {
-  background-color: #ededee;
-  color: rgb(0, 0, 0);
-  padding: 2px 4px;
-  display: inline-block; /* Add this line */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.box {
-    background-color: #2a2e35;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    border-left: 4px solid #404040;
-    padding: 1.5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-}
-
-.box-green {
-    border-left-color: #10b981;
-}
-
-.box-red {
-    border-left-color: #ef4444;
-}
-
-.box-yellow {
-    border-left-color: #f59e0b;
-}
-
-.box-blue {
-    border-left-color: #3b82f6;
 }
