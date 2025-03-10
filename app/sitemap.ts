@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
     {
       url: baseUrl,
       lastModified: new Date().toISOString(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
@@ -33,6 +33,12 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
       lastModified: new Date().toISOString(), 
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/get-quote`,
+      lastModified: new Date().toISOString(), 
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/privacy`,

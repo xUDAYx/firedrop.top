@@ -10,56 +10,57 @@ import "./globals.css";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://firescrap.site/"),
+  metadataBase: new URL("https://firedrop.site/"),
   title: {
-    default: "The #1 Platform to Automate Data & Scale with AI – FireScrap",
-    template: `%s | FireScrap`,
+    default: "Firedrop | College Projects Made Easy",
+    template: `%s | Firedrop`,
   },
-  description: 'Automate web scraping, WordPress data migration, eCommerce product imports, and booking automation with FireScrap. Use AI-powered solutions to save time, reduce errors, and scale your business effortlessly!',
+  description: 'Professional academic project development service. We build custom college projects while you focus on learning. No backlog guarantee, plagiarism-free, on-time delivery, and 24/7 support.',
   openGraph: {
-    title: "The #1 Platform to Automate Data & Scale with AI – FireScrap",
+    title: "Firedrop | College Projects Made Easy",
     description:
-      "Automate web scraping, WordPress data migration, eCommerce product imports, and booking automation with FireScrap. Use AI-powered solutions to save time, reduce errors, and scale your business effortlessly!",
+      "Professional academic project development service. We build custom college projects while you focus on learning. No backlog guarantee, plagiarism-free, on-time delivery, and 24/7 support.",
     images: [
       {
         url: '/testimonials/ss_rohit.jpg',
         width: 1200,
         height: 630,
-        alt: 'FireScrap - The #1 Platform to Automate Data & Scale with AI'
+        alt: 'Firedrop - College Projects Made Easy'
       }
     ],
-    url: "https://firescrap.site/",
+    url: "https://firedrop.site/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The #1 Platform to Automate Data & Scale with AI – FireScrap",
+    title: "Firedrop | College Projects Made Easy",
     description:
-      "Automate web scraping, WordPress data migration, eCommerce product imports, and booking automation with FireScrap. Use AI-powered solutions to save time, reduce errors, and scale your business effortlessly!",
+      "Professional academic project development service. We build custom college projects while you focus on learning. No backlog guarantee, plagiarism-free, on-time delivery, and 24/7 support.",
     siteId: "",
-    creator: "@firescrap",
+    creator: "@firedrop",
     creatorId: "",
     images: [
       {
         url: '/testimonials/ss_rohit.jpg',
         width: 1200,
         height: 630,
-        alt: 'FireScrap - The #1 Platform to Automate Data & Scale with AI'
+        alt: 'Firedrop - College Projects Made Easy'
       }
     ],
   },
   keywords: [
-    "web automation",
-    "AI web agent",
-    "web scraping",
-    "data extraction",
-    "WordPress migration",
-    "eCommerce automation",
-    "booking automation",
-    "data automation",
-    "FireScrap",
-    "AI automation",
-    "business automation",
-    "scale faster"
+    "college projects",
+    "academic projects",
+    "project development",
+    "student projects",
+    "custom projects",
+    "programming projects",
+    "engineering projects",
+    "no backlog guarantee",
+    "plagiarism-free",
+    "on-time delivery",
+    "24/7 support",
+    "Firedrop",
+    "professional projects"
   ],
   robots: {
     index: true,
@@ -94,33 +95,24 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "SoftwareApplication",
-                "name": "firedrop AI Agent",
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Any",
-                "description": "Automate your data collection and task management with intelligent AI web agents",
+                "@type": "Service",
+                "name": "Firedrop Academic Project Service",
+                "serviceType": "Academic Project Development",
+                "description": "Professional academic project development service. We build custom college projects while you focus on learning.",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Firedrop",
+                  "url": "https://firedrop.site"
+                },
                 "offers": {
                   "@type": "Offer",
-                  "price": "0",
-                  "priceCurrency": "USD"
+                  "availability": "https://schema.org/InStock",
+                  "priceCurrency": "INR"
                 },
                 "aggregateRating": {
                   "@type": "AggregateRating",
                   "ratingValue": "4.8",
                   "ratingCount": "150"
-                },
-                "author": {
-                  "@type": "Organization",
-                  "name": "firedrop",
-                  "url": "https://firedrop.site"
-                },
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "firedrop",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://firedrop.site/favicon.ico"
-                  }
                 }
               })
             }}
@@ -132,9 +124,9 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                "name": "firedrop",
+                "name": "Firedrop",
                 "url": "https://firedrop.site",
-                "logo": "https://firedrop.site/favicon.ico",
+                "logo": "https://firedrop.site/logo.png",
                 "sameAs": [
                   "https://twitter.com/firedrop"
                 ],
@@ -153,7 +145,7 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "firedrop AI Agent",
+                "name": "Firedrop - College Projects Made Easy",
                 "url": "https://firedrop.site",
                 "potentialAction": {
                   "@type": "SearchAction",

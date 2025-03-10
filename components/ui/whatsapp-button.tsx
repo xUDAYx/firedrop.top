@@ -110,7 +110,7 @@ export function WhatsAppButton() {
           target="_blank"
           rel="noopener noreferrer"
           className={`flex items-center justify-center bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 hover:shadow-xl group relative
-            ${isMobile ? 'w-10 h-10' : 'w-14 h-14'}
+            ${isMobile ? 'w-14 h-14' : 'w-14 h-14'}
             ${isPulsing ? 'ring-4 ring-green-500/50' : ''}
           `}
           aria-label="Chat on WhatsApp"
