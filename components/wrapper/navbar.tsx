@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "../theme-toggle";
 import Image from "next/image";
+import { getWhatsAppLink } from "@/components/ui/whatsapp-button";
 
 export default function NavBar() {
   return (
@@ -48,7 +49,15 @@ export default function NavBar() {
           {/* Right side: Theme Toggle and CTA Button */}
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            <Link href="/get-quote">
+            <a
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => {
+                e.preventDefault()
+                window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+              }}
+            >
               <Button 
                 variant="default" 
                 size="sm"
@@ -56,7 +65,7 @@ export default function NavBar() {
               >
                 Get Project Quote
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

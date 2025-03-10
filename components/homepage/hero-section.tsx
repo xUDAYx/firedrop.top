@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import AvatarCircles from "../ui/avatar-circles";
 import Image from "next/image";
+import { getWhatsAppLink } from "@/components/ui/whatsapp-button"
 
 export default function HeroSection() {
   return (
@@ -125,7 +126,15 @@ export default function HeroSection() {
             />
           </motion.div>
 
-          <Link href="/get-quote">
+          <a
+            href={getWhatsAppLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+            }}
+          >
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-12 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
@@ -133,7 +142,7 @@ export default function HeroSection() {
               Get Your Project Now
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-          </Link>
+          </a>
         </motion.div>
 
         {/* Social Proof Section */}

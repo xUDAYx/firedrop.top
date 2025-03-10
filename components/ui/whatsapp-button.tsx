@@ -139,4 +139,10 @@ export function WhatsAppButton() {
       </motion.div>
     </div>
   )
+}
+
+// Add a utility function to export the WhatsApp link generation
+export const getWhatsAppLink = () => {
+  const message = encodeURIComponent("Hi! I'm interested in getting help with my project. Can you assist me?")
+  return `https://wa.me/+919922699767?text=${message}`
 } 

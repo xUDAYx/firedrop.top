@@ -2,7 +2,7 @@
 import { motion } from "motion/react"
 import { ArrowRight, Clock, CheckCircle2, Sparkles, Bot } from "lucide-react"
 import { Button } from "../ui/button"
-import Link from "next/link"
+import { getWhatsAppLink } from "@/components/ui/whatsapp-button"
 
 const comparisonData = {
   manual: {
@@ -119,7 +119,15 @@ export default function PainPointsSection() {
             <span className="text-2xl font-semibold text-foreground">
               Ready to get your project done professionally?
             </span>
-            <Link href="/get-quote">
+            <a
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => {
+                e.preventDefault()
+                window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+              }}
+            >
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-12 shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-200"
@@ -127,7 +135,7 @@ export default function PainPointsSection() {
                 Get Your Project Done Now
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

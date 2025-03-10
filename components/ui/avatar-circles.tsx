@@ -28,9 +28,9 @@ export default function AvatarCircles({ className }: AvatarCirclesProps) {
             <Image
               src={image.src}
               alt={image.alt}
-              width={32}
-              height={32}
-              className="relative h-8 w-8 rounded-full border-2 border-background bg-background"
+              width={40}
+              height={40}
+              className="relative h-10 w-10 rounded-full border-2 border-background bg-background"
             />
           </motion.div>
         ))}
@@ -80,4 +80,4 @@ export default function AvatarCircles({ className }: AvatarCirclesProps) {
       </div>
     </div>
   )
-} 
+}

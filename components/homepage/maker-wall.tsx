@@ -9,7 +9,7 @@ import Link from "next/link"
 const testimonials = [
   {
     author: {
-      name: <span>Rahul <span className="blur-[5px] select-none opacity-70">Kumar</span></span>,
+      name: <span>Anagha <span className="blur-[5px] select-none opacity-70">Kumar</span></span>,
       role: "AI/ML Student, Class of &apos;24",
       avatar: "/avatars/avatar.svg"
     },
@@ -70,7 +70,7 @@ const testimonials = [
   },
   {
     author: {
-      name: <span>Neha <span className="blur-[5px] select-none opacity-70">Gupta</span></span>,
+      name: <span>Utkarsh <span className="blur-[5px] select-none opacity-70">Gupta</span></span>,
       role: "Web Development Major",
       avatar: "/avatars/bitmoji-4.svg"
     },
@@ -102,7 +102,7 @@ const testimonials = [
   },
   {
     author: {
-      name: <span>Riya <span className="blur-[5px] select-none opacity-70">Patel</span></span>,
+      name: <span>Pratap <span className="blur-[5px] select-none opacity-70">Patel</span></span>,
       role: "IoT Project Student",
       avatar: "/avatars/bitmoji-6.svg"
     },

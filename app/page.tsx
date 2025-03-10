@@ -11,7 +11,8 @@ import PainPointsSection from "@/components/homepage/pain-points-section";
 import HowItWorks from "@/components/homepage/how-it-works";
 import MakerWall from "@/components/homepage/maker-wall";
 import BoostCTA from "@/components/homepage/boost-cta";
-import MarkdownSection from "@/components/homepage/markdown-section";
+// import MarkdownSection from "@/components/homepage/markdown-section";
+import ProjectCategoriesSection from "@/components/homepage/project-categories-section";
 
 
 export default function Home() {
@@ -19,7 +20,8 @@ export default function Home() {
     <PageWrapper>
       <div className="flex flex-col justify-center items-center w-full mt-[1rem] p-3 space-y-24">
         <HeroSection />
-        <MarkdownSection />
+        {/* <ProjectCategoriesSection /> */}
+        {/* <MarkdownSection /> */}
         <TestimonialSection />
         <SideBySide />
         <HowItWorks />

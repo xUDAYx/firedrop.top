@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, GraduationCap, Sparkles } from 'lucide-react';
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { getWhatsAppLink } from "@/components/ui/whatsapp-button";
 
 export default function Footer() {
     const {
@@ -41,7 +42,7 @@ export default function Footer() {
         ],
         support: [
             { name: 'How It Works', href: '#how-it-works', scroll: true },
-            { name: 'Project Quote', href: '/get-quote', scroll: false },
+            { name: 'Project Quote', href: getWhatsAppLink(), scroll: false, external: true },
             { name: 'Sample Projects', href: '/samples', scroll: false }, 
             { name: '24/7 Support', href: '/contact', scroll: false },
         ],
@@ -78,12 +79,20 @@ export default function Footer() {
                             </span>
                         </h1>
                         <div className="mt-2">
-                            <Link href="/get-quote">
+                            <a
+                                href={getWhatsAppLink()}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+                                }}
+                            >
                                 <Button variant='secondary' className="hover:text-blue-500">
                                     Get Project Quote
                                     <ArrowRight className="ml-1 w-3.5 h-3.5" />
                                 </Button>
-                            </Link>
+                            </a>
                         </div>
                         <p className="text-sm dark:text-gray-400 mt-5">
                             © {new Date().getFullYear()} Firedrop. All rights reserved.
@@ -113,12 +122,29 @@ export default function Footer() {
                             <ul className="space-y-2">
                                 {links.support.map((item) => (
                                     <li key={item.name}>
-                                        <Link 
-                                            href={item.href}
-                                            className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
-                                        >
-                                            {item.name}
-                                        </Link>
+                                        {item.external ? (
+                                            <a
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={(e) => {
+                                                    if (item.href.includes('wa.me')) {
+                                                        e.preventDefault()
+                                                        window.open(item.href, '_blank', 'noopener,noreferrer')
+                                                    }
+                                                }}
+                                                className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
+                                            >
+                                                {item.name}
+                                            </a>
+                                        ) : (
+                                            <Link 
+                                                href={item.href}
+                                                className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
