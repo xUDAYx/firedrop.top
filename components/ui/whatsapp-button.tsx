@@ -3,6 +3,8 @@
 import { motion, AnimatePresence } from "motion/react"
 import { useEffect, useState } from "react"
 
+type MessageTemplate = 'default' | 'quote' | 'support'
+
 export function WhatsAppButton() {
   const [whatsappLink, setWhatsappLink] = useState("")
   const [showMessage, setShowMessage] = useState(false)
@@ -142,7 +144,31 @@ export function WhatsAppButton() {
 }
 
 // Add a utility function to export the WhatsApp link generation
-export const getWhatsAppLink = () => {
-  const message = encodeURIComponent("Hi! I'm interested in getting help with my project. Can you assist me?")
-  return `https://wa.me/+919922699767?text=${message}`
+export const getWhatsAppLink = (template: MessageTemplate = 'default') => {
+  // Base message templates
+  const messages = {
+    default: `Hello,\n\nI'm interested in your service. These are my requirements:\n\n` +
+      `- [enter your project requirement]\n` +
+      `- [enter your deadline]\n\n` +
+      `Looking forward to your response.`,
+    
+    quote: `Hello,\n\nI'm interested in your service. These are my requirements:\n\n` +
+      `- [enter your project requirement]\n` +
+      `- [enter your deadline]\n\n` +
+      `Thank you.`,
+    
+    support: `Hello,\n\nI'm interested in your service. These are my requirements:\n\n` +
+      `- [enter your project requirement]\n` +
+      `- [enter your deadline]\n\n` +
+      `Looking forward to connecting.`
+  }
+
+  // Use the international format for phone number (remove any '+' prefix)
+  const phoneNumber = "919922699767" // International format without '+'
+  
+  // Get the appropriate message and encode it
+  const message = encodeURIComponent(messages[template])
+  
+  // Construct the URL according to WhatsApp's URL scheme
+  return `https://wa.me/${phoneNumber}?text=${message}`
 } 

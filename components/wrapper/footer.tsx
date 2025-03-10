@@ -42,7 +42,7 @@ export default function Footer() {
         ],
         support: [
             { name: 'How It Works', href: '#how-it-works', scroll: true },
-            { name: 'Project Quote', href: getWhatsAppLink(), scroll: false, external: true },
+            { name: 'Project Quote', href: getWhatsAppLink('default'), scroll: false, external: true },
             { name: 'Sample Projects', href: '/samples', scroll: false }, 
             { name: '24/7 Support', href: '/contact', scroll: false },
         ],
@@ -80,12 +80,12 @@ export default function Footer() {
                         </h1>
                         <div className="mt-2">
                             <a
-                                href={getWhatsAppLink()}
+                                href={getWhatsAppLink('default')}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => {
                                     e.preventDefault()
-                                    window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+                                    window.open(getWhatsAppLink('default'), '_blank', 'noopener,noreferrer')
                                 }}
                             >
                                 <Button variant='secondary' className="hover:text-blue-500">

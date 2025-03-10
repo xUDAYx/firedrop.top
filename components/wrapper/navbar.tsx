@@ -50,12 +50,12 @@ export default function NavBar() {
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <a
-              href={getWhatsAppLink()}
+              href={getWhatsAppLink('quote')}
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => {
                 e.preventDefault()
-                window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+                window.open(getWhatsAppLink('quote'), '_blank', 'noopener,noreferrer')
               }}
             >
               <Button 

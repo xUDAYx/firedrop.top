@@ -6,12 +6,12 @@ import { getWhatsAppLink } from "./whatsapp-button"
 export function WhatsAppCTAButton() {
   return (
     <a
-      href={getWhatsAppLink()}
+      href={getWhatsAppLink('default')}
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => {
         e.preventDefault()
-        window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+        window.open(getWhatsAppLink('default'), '_blank', 'noopener,noreferrer')
       }}
     >
       <Button 

@@ -11,12 +11,12 @@ export function WhatsAppCard() {
         Get instant support via WhatsApp. We typically respond within minutes.
       </p>
       <a
-        href={getWhatsAppLink()}
+        href={getWhatsAppLink('support')}
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => {
           e.preventDefault()
-          window.open(getWhatsAppLink(), '_blank', 'noopener,noreferrer')
+          window.open(getWhatsAppLink('support'), '_blank', 'noopener,noreferrer')
         }}
       >
         <Button className="w-full bg-green-500 hover:bg-green-600">
