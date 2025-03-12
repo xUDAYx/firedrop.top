@@ -55,7 +55,7 @@ export default function Footer() {
         fun: [
             { 
                 name: '✨ Project Generator', 
-                href: '/fun/project-generator',
+                href: '/project-idea-generator',
                 highlight: true 
             },
         ],
