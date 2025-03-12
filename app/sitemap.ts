@@ -1,52 +1,67 @@
-type SitemapEntry = {
-  url: string;
-  lastModified: string;
-  changeFrequency:
-    | "always"
-    | "hourly"
-    | "daily"
-    | "weekly"
-    | "monthly"
-    | "yearly"
-    | "never";
-  priority?: number;
-};
+import { MetadataRoute } from 'next'
 
-export default async function sitemap(): Promise<SitemapEntry[]> {
-  const baseUrl = "https://firedrop.top";
+type ChangeFreq = "daily" | "weekly" | "monthly" | "always" | "hourly" | "yearly" | "never"
 
-  const staticPages: SitemapEntry[] = [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = "https://firedrop.top"
+  
+  // Project generator domains
+  const projectDomains = [
+    'ai-ml',
+    'data-science',
+    'cybersecurity',
+    'web-development'
+  ] as const
+
+  // Generate project generator URLs
+  const projectGeneratorUrls: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/project-idea-generator`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "daily" as ChangeFreq,
+      priority: 0.9
+    },
+    ...projectDomains.map(domain => ({
+      url: `${baseUrl}/project-idea-generator/${domain}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "daily" as ChangeFreq,
+      priority: 0.8
+    }))
+  ]
+
+  // Static pages
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
-      priority: 1,
+      changeFrequency: "weekly" as ChangeFreq,
+      priority: 1
     },
     {
       url: `${baseUrl}/about`,
       lastModified: new Date().toISOString(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "monthly" as ChangeFreq,
+      priority: 0.8
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date().toISOString(), 
-      changeFrequency: "monthly",
-      priority: 0.8,
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly" as ChangeFreq,
+      priority: 0.8
     },
     {
       url: `${baseUrl}/privacy`,
       lastModified: new Date().toISOString(),
-      changeFrequency: "monthly",
-      priority: 0.5,
+      changeFrequency: "monthly" as ChangeFreq,
+      priority: 0.5
     },
     {
       url: `${baseUrl}/terms`,
       lastModified: new Date().toISOString(),
-      changeFrequency: "monthly", 
-      priority: 0.5,
+      changeFrequency: "monthly" as ChangeFreq,
+      priority: 0.5
     }
-  ];
+  ]
 
-  return [...staticPages];
+  return [...projectGeneratorUrls, ...staticPages]
 }
