@@ -24,7 +24,12 @@ export default function robots(): MetadataRoute.Robots {
           '/api',
           '/admin',
           '/_next',
-          '/*.json$'
+          '/*.json$',
+          '/dashboard/',
+          '/cancel',
+          '/not-subscriber',
+          '/marketing',
+          '/playground'
         ]
       }
     ],
