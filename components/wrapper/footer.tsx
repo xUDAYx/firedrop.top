@@ -52,6 +52,13 @@ export default function Footer() {
             { name: 'Privacy Policy', href: '/privacy' },
             { name: 'Terms', href: '/terms' },
         ],
+        fun: [
+            { 
+                name: '✨ Project Generator', 
+                href: '/fun/project-generator',
+                highlight: true 
+            },
+        ],
     };
 
     return (
@@ -99,7 +106,7 @@ export default function Footer() {
                         </p>
                     </div>
                     
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div>
                             <h3 className="font-semibold mb-4">Services</h3>
                             <ul className="space-y-2">
@@ -158,6 +165,26 @@ export default function Footer() {
                                         <Link 
                                             href={item.href}
                                             className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 className="font-semibold mb-4">Fun Tools</h3>
+                            <ul className="space-y-2">
+                                {links.fun.map((item) => (
+                                    <li key={item.name}>
+                                        <Link 
+                                            href={item.href}
+                                            className={`
+                                                text-gray-600 hover:text-blue-500 
+                                                dark:text-gray-400 dark:hover:text-blue-400
+                                                ${item.highlight ? 'font-medium bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent hover:from-pink-600 hover:to-purple-600' : ''}
+                                            `}
                                         >
                                             {item.name}
                                         </Link>

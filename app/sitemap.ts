@@ -13,7 +13,7 @@ type SitemapEntry = {
 };
 
 export default async function sitemap(): Promise<SitemapEntry[]> {
-  const baseUrl = "https://firedrop.site";
+  const baseUrl = "https://firedrop.top";
 
   const staticPages: SitemapEntry[] = [
     {
@@ -33,12 +33,6 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
       lastModified: new Date().toISOString(), 
       changeFrequency: "monthly",
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/get-quote`,
-      lastModified: new Date().toISOString(), 
-      changeFrequency: "weekly",
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/privacy`,
