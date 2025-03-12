@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import Script from 'next/script';
 import "./globals.css";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button"
+import generateSchema from './schema'
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://firedrop.site/"),
@@ -85,6 +86,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const schema = generateSchema()
+  
   return (
     <AuthWrapper>
       <html lang="en" suppressHydrationWarning>
@@ -157,6 +160,10 @@ export default function RootLayout({
                 }
               })
             }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           />
         </head>
         <body className={GeistSans.className}>
